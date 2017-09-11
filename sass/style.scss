@@ -20,6 +20,8 @@ body{
 	flex-direction: column;
 }
 
+
+
 #main{
 	flex: 1 0 auto;
 
@@ -220,9 +222,9 @@ header{
     .sub-menu-parent::after {
     content: ''; 
     position: absolute; /* Абсолютное позиционирование */
-    left: 80px; bottom: -20px; /* Положение треугольника */
-    border: 10px solid transparent; /* Прозрачные границы */
-    border-top: 10px solid #9dc2c9 /* Добавляем треугольник */
+    right: 18px; bottom: 17px; /* Положение треугольника */
+    border: 5px solid transparent; /* Прозрачные границы */
+    border-left: 10px solid #9dc2c9 /* Добавляем треугольник */
    }
 }
 
@@ -256,17 +258,19 @@ footer{
 	color: #1f4c54;
 	max-width: 100%;
 	padding: 30px 0;
-			h1{
-				position: absolute;
+			div{
+				position: relative;			
+				h1{
+					position: absolute;
 
-				top: 35%;
-				left: 22%;
-				.life{
-					color: #79c0cd;
+					top: 35%;
+					left: 22%;
+					.life{
+						color: #79c0cd;
+					}
+					
 				}
-				
-			}
-	
+			}	
 
 			.slick-dots li button {
 				
@@ -456,7 +460,7 @@ footer{
 				padding: 10px;
 			}
 			a{
-				text-decoration: underline;
+				text-decoration: none;
 				color: #1f4c54;
 
 			}
