@@ -196,7 +196,7 @@ header .social .shake {
   list-style: none;
   text-align: center;
   padding: 15px;
-  /*transition: all 1s ease;*/
+  transition: all 0.5s ease;
 }
 /* line 208, ../sass/style.scss */
 .navContainer .subMenu li {
