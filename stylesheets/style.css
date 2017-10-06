@@ -88,8 +88,22 @@ header .social .shake {
   padding-left: 15px;
 }
 
+/*Resposnsive Header*/
+@media all and (max-width: 800px) {
+  /* line 83, ../sass/style.scss */
+  .top {
+    display: flex;
+    justify-content: center;
+  }
+  /* line 86, ../sass/style.scss */
+  .top .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*Resposnsive Header*/
 /*Shake*/
-/* line 84, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .shake {
   position: relative;
   display: inline-block;
@@ -130,7 +144,7 @@ header .social .shake {
     -webkit-transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-/* line 140, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 .shake:hover,
 .shake:focus {
   -webkit-transform-origin: 50% 50%;
@@ -142,109 +156,136 @@ header .social .shake {
 
 /*SHAKE
 */
-/* line 153, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 .navContainer {
+  display: flex;
+  justify-content: center;
   background: linear-gradient(to bottom, #ffffff, #f6faf9);
-  display: flex;
-  justify-content: center;
-}
-/* line 158, ../sass/style.scss */
-.navContainer > ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-/* line 164, ../sass/style.scss */
-.navContainer > ul > li {
-  position: relative;
-  border-radius: 7px;
-}
-/* line 169, ../sass/style.scss */
-.navContainer > ul > li:hover {
-  background: #d9f0f3;
 }
 /* line 171, ../sass/style.scss */
-.navContainer > ul > li:hover .subMenu {
-  width: 300px;
-  opacity: 1;
-  visibility: visible;
-  background: linear-gradient(to bottom, #ffffff, #dbf4f4);
-  border-radius: 15px;
+.navContainer > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 175, ../sass/style.scss */
+.navContainer > ul li {
+  position: relative;
+}
+/* line 177, ../sass/style.scss */
+.navContainer > ul li:hover {
+  background: #d9f0f3;
 }
 /* line 179, ../sass/style.scss */
-.navContainer > ul > li:hover .subMenu a {
-  border-radius: 10px;
+.navContainer > ul li:hover .subMenu {
+  min-width: 300px;
+  opacity: 1;
+  visibility: visible;
 }
-/* line 187, ../sass/style.scss */
-.navContainer > ul > li > a {
+/* line 185, ../sass/style.scss */
+.navContainer > ul li a {
   display: inline-block;
   text-decoration: none;
   color: #777;
   padding: 15px 40px;
-  font-family: sans-serif;
-  font-size: 15px;
 }
-/* line 197, ../sass/style.scss */
-.navContainer .subMenu {
+
+/* line 194, ../sass/style.scss */
+.subMenu {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: 100%;
   left: 0;
   right: -100px;
-  list-style: none;
-  text-align: center;
   padding: 15px;
-  transition: all 0.5s ease;
+  transition: all .5 ease;
+  background: linear-gradient(to bottom, #f6faf9, #ffffff);
 }
-/* line 208, ../sass/style.scss */
-.navContainer .subMenu li {
-  padding-bottom: 10px;
-}
-/* line 211, ../sass/style.scss */
-.navContainer .subMenu a {
+/* line 206, ../sass/style.scss */
+.subMenu li a {
   padding: 10px 20px;
   color: #4d4d4d;
 }
-/* line 217, ../sass/style.scss */
-.navContainer .subMenu a:hover {
+/* line 209, ../sass/style.scss */
+.subMenu li a:hover {
   background: #d9f0f3;
 }
-/* line 223, ../sass/style.scss */
-.navContainer .sub-menu-parent::after {
+
+/* line 216, ../sass/style.scss */
+.sub-menu-parent::after {
   content: '';
   position: absolute;
   /* Абсолютное позиционирование */
   right: 18px;
-  bottom: 17px;
+  top: 20px;
   /* Положение треугольника */
   border: 5px solid transparent;
   /* Прозрачные границы */
   border-left: 10px solid #9dc2c9;
 }
 
-/* line 234, ../sass/style.scss */
+/*Responsive MENU*/
+@media all and (max-width: 800px) {
+  /* line 229, ../sass/style.scss */
+  .navContainer {
+    display: flex;
+    justify-content: center;
+  }
+  /* line 232, ../sass/style.scss */
+  .navContainer ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  /* line 236, ../sass/style.scss */
+  .navContainer ul a {
+    display: block;
+    padding: 10px;
+  }
+  /* line 240, ../sass/style.scss */
+  .navContainer ul li:hover .subMenu {
+    display: block;
+    position: relative;
+    text-align: center;
+    -webkit-transition: all 0.5s ease-out;
+  }
+
+  /* line 249, ../sass/style.scss */
+  .sub-menu-parent::after {
+    content: '';
+    position: absolute;
+    /* Абсолютное позиционирование */
+    right: 18px;
+    bottom: 17px;
+    /* Положение треугольника */
+    border: 5px solid transparent;
+    /* Прозрачные границы */
+    border-top: 10px solid #9dc2c9;
+  }
+}
+/*Responsive MENU*/
+/* line 262, ../sass/style.scss */
 .logo {
   display: block;
   text-align: center;
   margin-top: 30px;
 }
 
-/* line 241, ../sass/style.scss */
+/* line 269, ../sass/style.scss */
 footer {
   min-height: 100px;
   background: #204c55;
 }
 
-/* line 247, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 .container {
   width: 1140px;
   max-width: 94%;
   margin: 0 auto;
 }
 
-/* line 256, ../sass/style.scss */
+/* line 284, ../sass/style.scss */
 .slider1 {
   .
 	background: #fff;
@@ -253,31 +294,31 @@ footer {
   max-width: 100%;
   padding: 30px 0;
 }
-/* line 262, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 .slider1 div {
   position: relative;
 }
-/* line 264, ../sass/style.scss */
+/* line 292, ../sass/style.scss */
 .slider1 div h1 {
   position: absolute;
   top: 35%;
   left: 22%;
 }
-/* line 269, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 .slider1 div h1 .life {
   color: #79c0cd;
 }
-/* line 276, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 .slider1 .slick-dots li button {
   border: 2px solid #3e8794;
   border-radius: 50%;
   transition: all 1s;
 }
-/* line 281, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 .slider1 .slick-dots li button:hover {
   background: #dbf4f4;
 }
-/* line 287, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 .slider1 .slick-dots li button::before {
   content: "";
   width: 6px;
@@ -289,45 +330,45 @@ footer {
   left: 20%;
   margin: 3px 0 0 3px;
 }
-/* line 299, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 .slider1 .slick-dots li.slick-active button {
   background: #dbf4f4;
 }
-/* line 304, ../sass/style.scss */
+/* line 332, ../sass/style.scss */
 .slider1 .slick-prev, .slider1 .slick-next {
   z-index: 1001;
   width: 40px;
   height: 40px;
 }
-/* line 309, ../sass/style.scss */
+/* line 337, ../sass/style.scss */
 .slider1 .slick-prev {
   left: 25px;
 }
-/* line 312, ../sass/style.scss */
+/* line 340, ../sass/style.scss */
 .slider1 .slick-next {
   right: 25px;
 }
-/* line 317, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 .slider1 .slick-prev::before, .slider1 .slick-next::before {
   font-size: 40px;
   color: #12879d;
 }
 
-/* line 324, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 .slider2 {
   min-width: 100%;
 }
-/* line 327, ../sass/style.scss */
+/* line 355, ../sass/style.scss */
 .slider2 .slick-dots li button {
   border: 2px solid #dbf4f4;
   border-radius: 50%;
   transition: all 1s;
 }
-/* line 332, ../sass/style.scss */
+/* line 360, ../sass/style.scss */
 .slider2 .slick-dots li button:hover {
   background: #dbf4f4;
 }
-/* line 338, ../sass/style.scss */
+/* line 366, ../sass/style.scss */
 .slider2 .slick-dots li button::before {
   content: "";
   width: 6px;
@@ -339,32 +380,40 @@ footer {
   left: 20%;
   margin: 3px 0 0 3px;
 }
-/* line 350, ../sass/style.scss */
+/* line 378, ../sass/style.scss */
 .slider2 .slick-dots li.slick-active button {
   background: #dbf4f4;
 }
-/* line 355, ../sass/style.scss */
+/* line 383, ../sass/style.scss */
 .slider2 .slick-prev, .slider2 .slick-next {
   z-index: 1001;
   width: 30px;
   height: 30px;
 }
-/* line 360, ../sass/style.scss */
+/* line 388, ../sass/style.scss */
 .slider2 .slick-prev {
   left: 25px;
 }
-/* line 363, ../sass/style.scss */
+/* line 391, ../sass/style.scss */
 .slider2 .slick-next {
   right: 25px;
 }
-/* line 368, ../sass/style.scss */
+/* line 396, ../sass/style.scss */
 .slider2 .slick-prev::before, .slider2 .slick-next::before {
   font-size: 30px;
   color: #12879d;
 }
 
+/*Slider Responsive*/
+@media all and (max-width: 800px) {
+  /* line 405, ../sass/style.scss */
+  h1 {
+    display: none;
+  }
+}
+/*Slider Responsive*/
 /*Information*/
-/* line 377, ../sass/style.scss */
+/* line 412, ../sass/style.scss */
 .information {
   width: 100%;
   margin: 50px auto;
@@ -376,11 +425,11 @@ footer {
   background: linear-gradient(to bottom, #ffffff, #f6faf9);
   color: #4d4d4d;
 }
-/* line 387, ../sass/style.scss */
+/* line 422, ../sass/style.scss */
 .information div {
-  margin: 50px;
+  margin: 30px;
 }
-/* line 390, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
 .information .btnInfo {
   padding: 5px 30px;
   border-radius: 10px;
@@ -390,14 +439,30 @@ footer {
   border: 2px solid black;
   transition: all 1s;
 }
-/* line 399, ../sass/style.scss */
+/* line 434, ../sass/style.scss */
 .information .btnInfo:hover {
   background: #98e0ed;
   color: #5d788d;
   border: 2px solid #61afbd;
 }
 
-/* line 408, ../sass/style.scss */
+@media all and (max-width: 800px) {
+  /* line 444, ../sass/style.scss */
+  .information {
+    font-size: 1em;
+  }
+  /* line 446, ../sass/style.scss */
+  .information div {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  /* line 450, ../sass/style.scss */
+  .information .btnInfo {
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+}
+/* line 457, ../sass/style.scss */
 .slider2 {
   display: flex;
   flex-direction: column;
@@ -405,30 +470,30 @@ footer {
   line-height: 15px;
   margin-bottom: 70px;
 }
-/* line 414, ../sass/style.scss */
+/* line 463, ../sass/style.scss */
 .slider2 img {
   display: inline-block !important;
   padding-bottom: 15px;
 }
-/* line 418, ../sass/style.scss */
+/* line 467, ../sass/style.scss */
 .slider2 h3 {
   padding-bottom: 30px;
 }
-/* line 421, ../sass/style.scss */
+/* line 470, ../sass/style.scss */
 .slider2 p {
   padding-bottom: 15px;
 }
-/* line 425, ../sass/style.scss */
+/* line 474, ../sass/style.scss */
 .slider2 a {
   text-decoration: none;
   color: #c8e3e9;
 }
-/* line 429, ../sass/style.scss */
+/* line 478, ../sass/style.scss */
 .slider2 div {
   margin: 30px;
 }
 
-/* line 437, ../sass/style.scss */
+/* line 486, ../sass/style.scss */
 .apointmentColor {
   margin: 30px 0 0 0;
   background: #dbf4f4;
@@ -436,15 +501,15 @@ footer {
   word-spacing: 3px;
 }
 
-/* line 445, ../sass/style.scss */
+/* line 494, ../sass/style.scss */
 .apointment {
   display: flex;
 }
-/* line 448, ../sass/style.scss */
+/* line 497, ../sass/style.scss */
 .apointment .leftApoint {
   width: 50%;
 }
-/* line 452, ../sass/style.scss */
+/* line 501, ../sass/style.scss */
 .apointment .rightApoint {
   width: 50%;
   margin: 30px;
@@ -452,24 +517,24 @@ footer {
   line-height: 26px;
   color: #1f4c54;
 }
-/* line 458, ../sass/style.scss */
+/* line 507, ../sass/style.scss */
 .apointment .rightApoint h2 {
   padding: 25px;
   font-family: 'Roboto Bold', sans-serif;
   font-size: 28px;
 }
-/* line 463, ../sass/style.scss */
+/* line 512, ../sass/style.scss */
 .apointment .rightApoint p {
   padding-bottom: 30px;
   font-family: 'Roboto Light', sans-serif;
   font-size: 18px;
 }
-/* line 467, ../sass/style.scss */
+/* line 516, ../sass/style.scss */
 .apointment .rightApoint p a {
   text-decoration: underline;
   color: #1f4c54;
 }
-/* line 472, ../sass/style.scss */
+/* line 521, ../sass/style.scss */
 .apointment .rightApoint .bookBtn {
   padding: 5px 20px;
   border-radius: 10px;
@@ -479,68 +544,104 @@ footer {
   border: 2px solid black;
   transition: all 1s;
 }
-/* line 481, ../sass/style.scss */
+/* line 530, ../sass/style.scss */
 .apointment .rightApoint .bookBtn:hover {
   background: #98e0ed;
   color: #5d788d;
   border: 2px solid #61afbd;
 }
 
-/* line 492, ../sass/style.scss */
+@media all and (max-width: 800px) {
+  /* line 541, ../sass/style.scss */
+  .apointmentColor {
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 544, ../sass/style.scss */
+  .apointmentColor .apointment {
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  /* line 551, ../sass/style.scss */
+  .apointmentColor .apointment .rightApoint {
+    width: 100%;
+    font-size: 1em;
+  }
+  /* line 557, ../sass/style.scss */
+  .apointmentColor .apointment .bookBtn {
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+}
+/* line 565, ../sass/style.scss */
 .footer {
   display: flex;
   flex-direction: column;
   color: white;
   margin-top: 50px;
 }
-/* line 497, ../sass/style.scss */
+/* line 570, ../sass/style.scss */
 .footer h2 {
   color: #7abfce;
   padding-bottom: 20px;
 }
-/* line 501, ../sass/style.scss */
+/* line 574, ../sass/style.scss */
 .footer p {
   padding: 10px 0;
 }
-/* line 504, ../sass/style.scss */
+/* line 577, ../sass/style.scss */
 .footer a {
   color: white;
   padding: 10px 0;
 }
-/* line 509, ../sass/style.scss */
+/* line 582, ../sass/style.scss */
 .footer .blockUp {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-/* line 513, ../sass/style.scss */
+/* line 586, ../sass/style.scss */
 .footer .blockUp .map {
   margin-right: 100px;
 }
-/* line 518, ../sass/style.scss */
+/* line 591, ../sass/style.scss */
 .footer .blockBottom {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 20px;
 }
-/* line 525, ../sass/style.scss */
+/* line 598, ../sass/style.scss */
 .footer .blockBottom .socialFooter a {
   padding: 0 20px;
 }
 
+@media all and (max-width: 800px) {
+  /* line 606, ../sass/style.scss */
+  .footer {
+    display: flex;
+  }
+  /* line 608, ../sass/style.scss */
+  .footer .blockUp {
+    display: flex;
+    flex-direction: column;
+  }
+}
 /*ABOUT US*/
-/* line 537, ../sass/style.scss */
+/* line 618, ../sass/style.scss */
 .crumbs {
   margin: 30px 0;
 }
 
-/* line 541, ../sass/style.scss */
+/* line 622, ../sass/style.scss */
 .crumbs ul li {
   list-style: none;
 }
 
-/* line 544, ../sass/style.scss */
+/* line 625, ../sass/style.scss */
 .crumbs ul li a {
   display: block;
   float: left;
@@ -555,7 +656,7 @@ footer {
   color: #fff;
 }
 
-/* line 557, ../sass/style.scss */
+/* line 638, ../sass/style.scss */
 .crumbs ul li a:after {
   content: "";
   border-top: 20px solid transparent;
@@ -567,7 +668,7 @@ footer {
   z-index: 2;
 }
 
-/* line 567, ../sass/style.scss */
+/* line 648, ../sass/style.scss */
 .crumbs ul li a:before {
   content: "";
   border-top: 20px solid transparent;
@@ -578,84 +679,84 @@ footer {
   top: 0;
 }
 
-/* line 574, ../sass/style.scss */
+/* line 655, ../sass/style.scss */
 .crumbs ul li:first-child a {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-/* line 577, ../sass/style.scss */
+/* line 658, ../sass/style.scss */
 .crumbs ul li:first-child a:before {
   display: none;
 }
 
-/* line 581, ../sass/style.scss */
+/* line 662, ../sass/style.scss */
 .crumbs ul li:last-child a {
   padding-right: 40px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-/* line 585, ../sass/style.scss */
+/* line 666, ../sass/style.scss */
 .crumbs ul li:last-child a:after {
   display: none;
 }
 
-/* line 588, ../sass/style.scss */
+/* line 669, ../sass/style.scss */
 .crumbs ul li a:hover {
   background: #79c0cd;
 }
 
-/* line 591, ../sass/style.scss */
+/* line 672, ../sass/style.scss */
 .crumbs ul li a:hover:after {
   border-left-color: #79c0cd;
 }
 
-/* line 596, ../sass/style.scss */
+/* line 677, ../sass/style.scss */
 .aboutUs {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   color: #1f4c54;
 }
-/* line 601, ../sass/style.scss */
+/* line 682, ../sass/style.scss */
 .aboutUs h2 {
   font-size: 40px;
   padding-bottom: 30px;
 }
-/* line 605, ../sass/style.scss */
+/* line 686, ../sass/style.scss */
 .aboutUs h3 {
   padding-bottom: 20px;
 }
-/* line 608, ../sass/style.scss */
+/* line 689, ../sass/style.scss */
 .aboutUs p {
   padding-bottom: 25px;
 }
-/* line 611, ../sass/style.scss */
+/* line 692, ../sass/style.scss */
 .aboutUs a {
   text-decoration: underline;
   color: #79c0cd;
 }
-/* line 615, ../sass/style.scss */
+/* line 696, ../sass/style.scss */
 .aboutUs ul {
   padding-bottom: 30px;
   list-style: square inside;
 }
-/* line 618, ../sass/style.scss */
+/* line 699, ../sass/style.scss */
 .aboutUs ul a {
   text-decoration: none;
   color: #4d4d4d;
 }
-/* line 623, ../sass/style.scss */
+/* line 704, ../sass/style.scss */
 .aboutUs .aboutLeft {
   padding: 0 50px;
 }
-/* line 626, ../sass/style.scss */
+/* line 707, ../sass/style.scss */
 .aboutUs .asideUp {
   padding: 20px 40px;
   background: #eff5f5;
 }
-/* line 629, ../sass/style.scss */
+/* line 710, ../sass/style.scss */
 .aboutUs .asideUp .bookBtn {
   padding: 5px 20px;
   border-radius: 20px;
@@ -665,7 +766,7 @@ footer {
   border: 2px solid black;
   transition: all 1s;
 }
-/* line 638, ../sass/style.scss */
+/* line 719, ../sass/style.scss */
 .aboutUs .asideUp .bookBtn:hover {
   background: #98e0ed;
   color: #5d788d;
@@ -674,36 +775,36 @@ footer {
 
 /*ABOUT US*/
 /*DOCTOR VARMA HTML*/
-/* line 652, ../sass/style.scss */
+/* line 733, ../sass/style.scss */
 .doctor {
   display: flex;
   margin: 20px;
   color: #4d595b;
 }
-/* line 656, ../sass/style.scss */
+/* line 737, ../sass/style.scss */
 .doctor .text {
   padding: 0 40px;
 }
-/* line 658, ../sass/style.scss */
+/* line 739, ../sass/style.scss */
 .doctor .text a {
   color: #79c0cd;
 }
 
 /*FORM*/
 /* === Remove input autofocus webkit === */
-/* line 667, ../sass/style.scss */
+/* line 748, ../sass/style.scss */
 *:focus {
   outline: none;
 }
 
 /* === Form Typography === */
 /* === List Styles === */
-/* line 673, ../sass/style.scss */
+/* line 754, ../sass/style.scss */
 .contactForm {
   background: #eff5f5;
 }
 
-/* line 677, ../sass/style.scss */
+/* line 758, ../sass/style.scss */
 .contactForm ul {
   list-style-type: none;
   list-style-position: outside;
@@ -711,19 +812,19 @@ footer {
   padding: 0px;
 }
 
-/* line 684, ../sass/style.scss */
+/* line 765, ../sass/style.scss */
 .contactForm li {
   padding: 12px;
   position: relative;
 }
 
 /* === Form Header === */
-/* line 692, ../sass/style.scss */
+/* line 773, ../sass/style.scss */
 h2 {
   text-align: center;
 }
 
-/* line 695, ../sass/style.scss */
+/* line 776, ../sass/style.scss */
 .requiredNotification {
   color: #d45252;
   margin: 5px 0 0 0;
@@ -733,7 +834,7 @@ h2 {
 }
 
 /* === Form Elements === */
-/* line 704, ../sass/style.scss */
+/* line 785, ../sass/style.scss */
 .contactForm label {
   width: 150px;
   margin-top: 3px;
@@ -742,26 +843,26 @@ h2 {
   padding: 3px;
 }
 
-/* line 711, ../sass/style.scss */
+/* line 792, ../sass/style.scss */
 .contactForm input {
   height: 20px;
   width: 220px;
   padding: 5px 8px;
 }
 
-/* line 716, ../sass/style.scss */
+/* line 797, ../sass/style.scss */
 .contactForm textarea {
   padding: 8px;
   width: 300px;
 }
 
-/* line 717, ../sass/style.scss */
+/* line 798, ../sass/style.scss */
 .contactForm button {
   margin-left: 18%;
 }
 
 /* form element visual styles */
-/* line 720, ../sass/style.scss */
+/* line 801, ../sass/style.scss */
 .contactForm input, .contactForm textarea {
   border: 1px solid #aaa;
   box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
@@ -773,7 +874,7 @@ h2 {
   transition: padding .25s;
 }
 
-/* line 730, ../sass/style.scss */
+/* line 811, ../sass/style.scss */
 .contactForm input:focus, .contactForm textarea:focus {
   background: #fff;
   border: 1px solid #555;
@@ -782,19 +883,19 @@ h2 {
 }
 
 /* === HTML5 validation styles === */
-/* line 738, ../sass/style.scss */
+/* line 819, ../sass/style.scss */
 .contactForm input:required, .contactForm textarea:required {
   background: #fff url(images/red_asterisk.png) no-repeat 98% center;
 }
 
-/* line 741, ../sass/style.scss */
+/* line 822, ../sass/style.scss */
 .contactForm input:required:valid, .contactForm textarea:required:valid {
   background: #fff url(images/valid.png) no-repeat 98% center;
   box-shadow: 0 0 5px #71bac7;
   border-color: #71bac7;
 }
 
-/* line 746, ../sass/style.scss */
+/* line 827, ../sass/style.scss */
 .contactForm input:focus:invalid, .contactForm textarea:focus:invalid {
   background: #fff url(images/invalid.png) no-repeat 98% center;
   box-shadow: 0 0 5px #d45252;
@@ -802,7 +903,7 @@ h2 {
 }
 
 /* === Form hints === */
-/* line 753, ../sass/style.scss */
+/* line 834, ../sass/style.scss */
 .formHint {
   background: #d45252;
   border-radius: 3px 3px 3px 3px;
@@ -816,7 +917,7 @@ h2 {
   display: none;
 }
 
-/* line 763, ../sass/style.scss */
+/* line 844, ../sass/style.scss */
 .formHint::before {
   content: "\25C0";
   color: #d45252;
@@ -825,23 +926,23 @@ h2 {
   left: -6px;
 }
 
-/* line 770, ../sass/style.scss */
+/* line 851, ../sass/style.scss */
 .contactForm input:focus + .formHint {
   display: inline;
 }
 
-/* line 771, ../sass/style.scss */
+/* line 852, ../sass/style.scss */
 .contactForm input:required:valid + .formHint {
   background: #71bac7;
 }
 
-/* line 772, ../sass/style.scss */
+/* line 853, ../sass/style.scss */
 .contactForm input:required:valid + .formHint::before {
   color: #71bac7;
 }
 
 /* === Button Style === */
-/* line 775, ../sass/style.scss */
+/* line 856, ../sass/style.scss */
 button.submit {
   background-color: #75bdca;
   background: -webkit-gradient(linear, left top, left bottom, from(#75bdca), to(#60aebc));
@@ -869,13 +970,13 @@ button.submit {
   text-shadow: 0 -1px 0 #71bac7;
 }
 
-/* line 801, ../sass/style.scss */
+/* line 882, ../sass/style.scss */
 button.submit:hover {
   opacity: .85;
   cursor: pointer;
 }
 
-/* line 805, ../sass/style.scss */
+/* line 886, ../sass/style.scss */
 button.submit:active {
   border: 1px solid #71bac7;
   box-shadow: 0 0 10px 5px #71bac7 inset;
@@ -887,28 +988,28 @@ button.submit:active {
 
 /*DOCTOR VARMA HTML*/
 /*SERVICES*/
-/* line 820, ../sass/style.scss */
+/* line 901, ../sass/style.scss */
 .content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-/* line 824, ../sass/style.scss */
+/* line 905, ../sass/style.scss */
 .content .services {
   text-align: center;
   padding: 20px;
 }
-/* line 827, ../sass/style.scss */
+/* line 908, ../sass/style.scss */
 .content .services h3 {
   padding: 25px 0;
   color: #253234;
 }
-/* line 831, ../sass/style.scss */
+/* line 912, ../sass/style.scss */
 .content .services p {
   padding-bottom: 30px;
   color: #4d4d4d;
 }
-/* line 835, ../sass/style.scss */
+/* line 916, ../sass/style.scss */
 .content .services a {
   text-decoration: underline;
   color: #79c0cd;
@@ -916,49 +1017,49 @@ button.submit:active {
 
 /*SERVICES*/
 /*SERVICES Functional Neurology*/
-/* line 847, ../sass/style.scss */
+/* line 928, ../sass/style.scss */
 .nevUp {
   background: #dbf4f4;
 }
-/* line 853, ../sass/style.scss */
+/* line 934, ../sass/style.scss */
 .nevUp .container {
   display: flex;
   padding: 30px 0;
 }
-/* line 857, ../sass/style.scss */
+/* line 938, ../sass/style.scss */
 .nevUp .nevInfo {
   text-align: center;
 }
-/* line 859, ../sass/style.scss */
+/* line 940, ../sass/style.scss */
 .nevUp .nevInfo h2 {
   color: #1f4c54;
   padding: 15px;
 }
-/* line 863, ../sass/style.scss */
+/* line 944, ../sass/style.scss */
 .nevUp .nevInfo a {
   text-decoration: underline;
   color: #88c7d2;
 }
-/* line 867, ../sass/style.scss */
+/* line 948, ../sass/style.scss */
 .nevUp .nevInfo ul {
   padding: 15px;
 }
-/* line 871, ../sass/style.scss */
+/* line 952, ../sass/style.scss */
 .nevUp .nevInfo li {
   display: inline;
   padding-left: 10px;
 }
-/* line 874, ../sass/style.scss */
+/* line 955, ../sass/style.scss */
 .nevUp .nevInfo li::before {
   content: '●';
   padding-right: 5px;
   color: #88c7d2;
 }
-/* line 880, ../sass/style.scss */
+/* line 961, ../sass/style.scss */
 .nevUp .nevInfo p {
   padding-bottom: 30px;
 }
-/* line 883, ../sass/style.scss */
+/* line 964, ../sass/style.scss */
 .nevUp .nevInfo .bookBtn {
   padding: 5px 20px;
   border-radius: 20px;
@@ -968,14 +1069,14 @@ button.submit:active {
   border: 2px solid black;
   transition: all 1s;
 }
-/* line 891, ../sass/style.scss */
+/* line 972, ../sass/style.scss */
 .nevUp .nevInfo .bookBtn:hover {
   background: #98e0ed;
   color: #5d788d;
   border: 2px solid #61afbd;
 }
 
-/* line 899, ../sass/style.scss */
+/* line 980, ../sass/style.scss */
 .nevDown {
   display: flex;
   justify-content: space-between;
@@ -983,46 +1084,46 @@ button.submit:active {
   padding: 30px 0;
   color: #1f4c54;
 }
-/* line 905, ../sass/style.scss */
+/* line 986, ../sass/style.scss */
 .nevDown .nevLeft {
   padding-right: 40px;
 }
-/* line 908, ../sass/style.scss */
+/* line 989, ../sass/style.scss */
 .nevDown h2 {
   font-size: 40px;
   padding-bottom: 30px;
 }
-/* line 912, ../sass/style.scss */
+/* line 993, ../sass/style.scss */
 .nevDown h3 {
   padding-bottom: 20px;
 }
-/* line 915, ../sass/style.scss */
+/* line 996, ../sass/style.scss */
 .nevDown p {
   padding-bottom: 25px;
 }
-/* line 918, ../sass/style.scss */
+/* line 999, ../sass/style.scss */
 .nevDown a {
   text-decoration: underline;
   color: #4d4d4d;
 }
-/* line 922, ../sass/style.scss */
+/* line 1003, ../sass/style.scss */
 .nevDown .navLeftList {
   display: flex;
   justify-content: space-between;
   padding-right: 30px;
 }
-/* line 927, ../sass/style.scss */
+/* line 1008, ../sass/style.scss */
 .nevDown ul {
   padding-bottom: 30px;
   list-style: square inside;
   color: #79c0cd;
 }
-/* line 933, ../sass/style.scss */
+/* line 1014, ../sass/style.scss */
 .nevDown .asideUp {
   padding: 20px 40px;
   background: #eff5f5;
 }
-/* line 936, ../sass/style.scss */
+/* line 1017, ../sass/style.scss */
 .nevDown .asideUp .bookBtn {
   padding: 5px 20px;
   border-radius: 20px;
@@ -1032,7 +1133,7 @@ button.submit:active {
   border: 2px solid black;
   transition: all 1s;
 }
-/* line 945, ../sass/style.scss */
+/* line 1026, ../sass/style.scss */
 .nevDown .asideUp .bookBtn:hover {
   background: #98e0ed;
   color: #5d788d;
@@ -1040,53 +1141,56 @@ button.submit:active {
 }
 
 /*BOOK*/
-/* line 957, ../sass/style.scss */
+/* line 1038, ../sass/style.scss */
 .wrapBook {
   display: flex;
   justify-content: space-between;
 }
-/* line 961, ../sass/style.scss */
+/* line 1042, ../sass/style.scss */
 .wrapBook .bookApointment {
   margin: 30px;
   color: #4d4d4d;
 }
-/* line 965, ../sass/style.scss */
+/* line 1046, ../sass/style.scss */
 .wrapBook .bookApointment h3 {
   padding: 30px 0;
   color: #1f4c54;
 }
-/* line 969, ../sass/style.scss */
+/* line 1050, ../sass/style.scss */
 .wrapBook .bookApointment p {
   padding-bottom: 20px;
 }
-/* line 972, ../sass/style.scss */
+/* line 1053, ../sass/style.scss */
 .wrapBook .bookApointment ul {
   padding-bottom: 20px;
   list-style: square inside;
   color: #79c0cd;
 }
-/* line 978, ../sass/style.scss */
+/* line 1059, ../sass/style.scss */
 .wrapBook .bookApointment a {
   text-decoration: underline;
   color: #1f4c54;
 }
-/* line 983, ../sass/style.scss */
+/* line 1064, ../sass/style.scss */
 .wrapBook .formBook {
   margin-right: 101px;
 }
 
 /*BOOK*/
 /*CONTACT US*/
-/* line 991, ../sass/style.scss */
+/* line 1072, ../sass/style.scss */
 .contactInfo {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 996, ../sass/style.scss */
+/* line 1077, ../sass/style.scss */
 .contactInfo2 {
   display: flex;
   justify-content: space-between;
 }
 
+/*CONTACT US*/
+              /*
+ 
 /*CONTACT US*/
