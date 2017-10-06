@@ -215,10 +215,10 @@ header{
 
    .sub-menu-parent::after {
     content: ''; 
-    position: absolute; /* Абсолютное позиционирование */
-    right: 18px; top: 20px; /* Положение треугольника */
-    border: 5px solid transparent; /* Прозрачные границы */
-    border-left: 10px solid #9dc2c9 /* Добавляем треугольник */
+    position: absolute; /* Абсолютне позиціонування */
+    right: 18px; top: 20px; /* Положення трикутника */
+    border: 5px solid transparent; /* Прозорі межі */
+    border-left: 10px solid #9dc2c9 /* Додавання трикутника */
    }
 
 
@@ -248,10 +248,10 @@ header{
   }
   .sub-menu-parent::after {
     content: ''; 
-    position: absolute; /* Абсолютное позиционирование */
-    right: 18px; bottom: 17px; /* Положение треугольника */
-    border: 5px solid transparent; /* Прозрачные границы */
-    border-top: 10px solid #9dc2c9 /* Добавляем треугольник */
+    position: absolute; /* Абсолютне позиціонування */
+    right: 18px; bottom: 17px; /* Положення трикутника */
+    border: 5px solid transparent; /* Прозорі межі  */
+    border-top: 10px solid #9dc2c9 /* Додавання трикутника */
    }
 }
 
